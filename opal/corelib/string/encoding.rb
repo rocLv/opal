@@ -131,6 +131,7 @@ end
 
 class String
   `String.prototype.encoding = #{Encoding::UTF_16LE}`
+  Encoding.default_external = Encoding::UTF_16LE
 
   def bytes
     each_byte.to_a
