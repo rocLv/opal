@@ -158,8 +158,10 @@ class String
   end
 
   def force_encoding(encoding)
-    encoding = Opal.coerce_to!(encoding, String, :to_str)
-    encoding = Encoding.find(encoding)
+    unless Encoding === encoding
+      encoding = Opal.coerce_to!(encoding, String, :to_str)
+      encoding = Encoding.find(encoding)
+    end
 
     return self if encoding == @encoding
     raise ArgumentError, "unknown encoding name - #{encoding}" if encoding.nil?
