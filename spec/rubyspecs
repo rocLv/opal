@@ -148,5 +148,6 @@ rubyspec/library/openstruct
 rubyspec/library/pathname
 rubyspec/library/pp
 rubyspec/library/set
+rubyspec/library/shellwords
 rubyspec/library/singleton
 rubyspec/library/stringscanner
